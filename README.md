@@ -1,2 +1,2 @@
-# This is beauty store website
+# This is a beauty store website
 
