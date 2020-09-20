@@ -181,7 +181,6 @@ header nav{
 .left-container-shades{
     width: 45%;
     height: 100vh;
-    border: 1px solid white;
     background: #192D46;
     position: absolute;
     top: 6%;
@@ -191,7 +190,6 @@ header nav{
 .right-container-palette{
     width: 45%;
     height: 100vh;
-    border: 1px solid black;
     background: #E9EEF2;
     position: absolute;
     bottom: 0%;
@@ -203,7 +201,6 @@ header nav{
     bottom: 12%;
     left: 10%;
     width: 32%;
-    border: 1px solid white;
     font-family: kazimir;
     padding: 10px;
 }
@@ -237,6 +234,9 @@ header nav{
     float: right;
     cursor: pointer;
 }
+.fal.fa-long-arrow-right{
+    margin-left: 1em;
+}
 
 .best-seller{
     position: absolute;
@@ -263,7 +263,6 @@ header nav{
 .product-container{
     width: 95%;
     height: 90%;
-    border: 1px solid black;
     margin: auto;
     position: absolute;
     top: 8%;
@@ -324,7 +323,6 @@ header nav{
 .left-container{
     width: 45%;
     height: 100vh;
-    border: 1px solid white;
     background: #192D46;
     position: absolute;
     top: 0%;
@@ -336,7 +334,6 @@ header nav{
     bottom: 15%;
     right: 10%;
     width: 32%;
-    border: 1px solid white;
     font-family: kazimir;
     padding: 10px;
 }
@@ -355,10 +352,13 @@ header nav{
     cursor: pointer;
 }
 
+.fal.fa-long-arrow-left{
+    margin-right: 1em;
+}
+
 .right-container{
     width: 45%;
     height: 100vh;
-    border: 1px solid white;
     background: #E9EEF2;
     position: absolute;
     top: 0%;
@@ -370,7 +370,7 @@ header nav{
 
 #footer{
     width: 100vw;
-    height: 90vh;
+    height: 70vh;
     background: #051326;
     position: relative;
     font-family: 'Montserrat', sans-serif;
@@ -380,7 +380,6 @@ header nav{
 #footer-container{
     width: 82%;
     height: 100%;
-    border: 1px solid white;
     position: absolute;
     left: 8%;
     display: flex;
@@ -392,7 +391,6 @@ header nav{
     max-height: 40%;
     padding: 5px;
     margin-top: 10px;
-    border: 1px solid white;
 }
 .footer-items-title a{
     font-size: 1em;
@@ -421,4 +419,40 @@ header nav{
 
 .footer-items-title-list  a:hover{
     text-decoration: underline;
+}
+
+.footer-contact{
+    position: absolute;
+    bottom: 2%;
+    right: 0%;
+    padding: 10px;
+}
+.footer-contact h4{
+    color: white;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    line-height: 2em;
+}
+
+.footer-contact p{
+    color: white;
+    font-size: 0.75em;
+    margin-bottom: 1em;
+}
+
+.footer-contact h5{
+    text-transform: uppercase;
+    color: white;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.social{
+    display: flex;
+}
+
+.footer-icons{
+    color: #F8FAFC;
+    margin-right: 1em;
+    font-size: 1.2em;
 }
