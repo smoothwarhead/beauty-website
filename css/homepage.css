@@ -370,7 +370,55 @@ header nav{
 
 #footer{
     width: 100vw;
-    height: 60vh;
-    margin-top: 5em;
+    height: 90vh;
     background: #051326;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+#footer-container{
+    width: 82%;
+    height: 100%;
+    border: 1px solid white;
+    position: absolute;
+    left: 8%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-items{
+    max-width: fit-content;
+    max-height: 40%;
+    padding: 5px;
+    margin-top: 10px;
+    border: 1px solid white;
+}
+.footer-items-title a{
+    font-size: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #F8FAFC;
+}
+
+.footer-items-title-list{
+    margin-top: 1em;
+}
+
+.footer-items-title-list li{
+    list-style: none;
+}
+
+.footer-items-title-list li a{
+    font-size: 0.75em;
+    text-decoration: none;
+    color: #F8FAFC;
+}
+
+.footer-items-title:hover{
+    text-decoration: underline;
+}
+
+.footer-items-title-list  a:hover{
+    text-decoration: underline;
 }
