@@ -314,7 +314,7 @@ header nav{
     grid-row: 2 / 3;
 }
 
-#container4, #container5, #container6{
+#container4, #container5, #container6, #container7, #container8, #container9, #container10, #container11{
     width: 100vw;
     height: 100vh;
     position: relative;
@@ -363,4 +363,14 @@ header nav{
     position: absolute;
     top: 0%;
     right: 8%;
+}
+#container7{
+    background: #E9EEF2;
+}
+
+#footer{
+    width: 100vw;
+    height: 60vh;
+    margin-top: 5em;
+    background: #051326;
 }
