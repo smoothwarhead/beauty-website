@@ -8,8 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Parisienne&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/87f37a521e.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     
-    <link rel="stylesheet" href="./css/body.css">
+    <link rel="stylesheet" href="./css/eyespage.css">
 </head>
 <body>
     <div id="container1">
@@ -46,30 +47,150 @@
 
         <div id="main-container">
             <h1>All eyes</h1>
-            <p>Long lasting and versatile eyeshadow, mascara, eyeliner,
+            <p class="description">Long lasting and versatile eyeshadow, mascara, eyeliner,
                 eyelash, and eye pencil. Try our entire eye color nation.
             </p>
-            <div class="select-container">
-                <select name="filter" id="filter" class="filter">
-                    <option value="filter">Filter</option>
-                    <option value="brow">Eye Brow</option>
-                    <option value="mascara">Mascara</option>
-                    <option value="liner">Eye liner</option>
-                    <option value="shadow">Eye Shadow</option>
-                    <option value="lash">Eye Lash</option>
-                </select>
+
+            <div class="filter-container">
+
+                <div class="select-container eyes-products-container">
+
+                    <ul class="default-option opt1">
+                        <li>
+                            <div class="option default">
+                                <p>Filter</p>
+                                <div class="icon"><i class="fal fa-angle-down"></i></div>
+                            </div>
+                        </li>
+                    </ul>
+    
+                    <ul class="select select1">
+                        <li>
+                            <div class="option filter">
+                                <p>Filter</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="option brow">
+                                <p>Eye Brow</p>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="option mascara">
+                                <p>Mascara</p>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="option liner">
+                                <p>Eye Liner</p>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="option shadow">
+                                <p>Eye Shadow</p>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="option lash">
+                                <p>Eye lashes</p>
+                            </div>
+                        </li>
+                    </ul>
+    
+    
+                </div>
+    
+                <div class="select-container price-filter-container">
+    
+                    <ul class="default-option opt2">
+                        <li>
+                            <div class="option default">
+                                <p>Shop By</p>
+                                <div class="icon"><i class="fal fa-angle-down"></i></div>
+                            </div>
+                        </li>
+                    </ul>
+    
+                    <ul class="select select2">
+                        <li>
+                            <div class="option filter">
+                                <p>Shop By</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="option brow">
+                                <p>Best Selling</p>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="option mascara">
+                                <p>Price, Low to High</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="option mascara">
+                                <p>Price, High to Low</p>
+                            </div>
+                        </li>
+    
+                        
+                    </ul>
+    
+    
+                </div>
+
+            </div>
+
+            
 
 
-                <select name="shop-by" id="shop-by" class="shop-by">
-                    <option value="filter">shop by</option>
-                    <option value="brow">Best selling</option>
-                    <option value="mascara">Price, low to high</option>
-                    <option value="liner">Price, high to low</option>
-                </select>
+
+
+
+
+
+            <div id="all-product-container">
+                <div class="products product1"></div>
+                <div class="products product2"></div>
+                <div class="products product3"></div>
+                <div class="products product4"></div>
+                <div class="products product5"></div>
+                <div class="products product6"></div>
+                <div class="products product7"></div>
+                <div class="products product8"></div>
+                <div class="products product9"></div>
+                <div class="products product10"></div>
+                <div class="products product11"></div>
+                <div class="products product12"></div>
+                <div class="products product13"></div>
+                <div class="products product14"></div>
+                <div class="products product15"></div>
+                <div class="products product16"></div>
+            </div>
+
+            <div class="product-swipe">
+
+                <i class="fal fa-long-arrow-left"></i>
+
+                <div class="all-swipes">
+                    <div class="swipes current">1</div>
+                    <div class="swipes">2</div>
+                    <div class="swipes">3</div>
+                    <div class="swipes">4</div>
+                </div>
+
+                <i class="fal fa-long-arrow-right"></i>
             </div>
         </div>
+        
+    </div>
 
-        <!-- <div id="footer">
+    <div id="footer">
             <div id="footer-container">
                 <div class="footer-items footer1">
                     <div class="footer-items-title"><a href="#">Skin</a></div>
@@ -170,7 +291,35 @@
                     </div>
                 </div>
             </div>
-        </div> -->
-    </div>
+        </div>
+
+
+        <script>
+            $(document).ready(function(){
+
+                $('.default-option').click(function(){
+
+                    $(this).parent().toggleClass('active');  
+                })
+
+                $('.select1 li').click(function(){
+                    let currentText = $(this).text();
+                    $('.opt1 p').text(currentText);
+                    $('.opt1').parent().removeClass('active');
+                    
+                })
+                $('.select2 li').click(function(){
+                    let currentText = $(this).text();
+                    $('.opt2 p').text(currentText);
+                    $('.opt2').parent().removeClass('active');
+                    
+                })
+
+
+
+            })
+
+
+        </script>
 </body>
 </html>     
