@@ -1,5 +1,5 @@
 @font-face{
-    src: url(fonts/KazimirText-Regular.ttf);
+    src: url(../fonts/KazimirText-Regular.ttf);
     font-family: kazimir;
 
 }
@@ -7,18 +7,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
 body{
     overflow-x: hidden;
     background: #394F6A;
-   
-
+    font-family: 'Montserrat', sans-serif;
 }
 
 #container1{
     position: relative;
-    border: 1px solid white;
     width: 100vw;
     height: 350vh;
 }
@@ -63,7 +62,6 @@ header nav{
     text-transform: uppercase;
     font-size: 0.75em;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
     color: #F8FAFC;
     font-weight: 600;
     line-height: 1.5em;
@@ -83,7 +81,6 @@ header nav{
     text-transform: uppercase;
     font-size: 0.75em;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
     color: #F8FAFC;
     font-weight: 600;
     line-height: 1.5em;
@@ -112,7 +109,6 @@ header nav{
 .list3 ul li a{
     font-size: 0.75em;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
     color: #F8FAFC;
     font-weight: 500;
 }
@@ -122,7 +118,6 @@ header nav{
 }
 
 #main-container{
-    border: 1px solid white;
     padding: 10px;
     width: 82%;
     height: 90%;
@@ -130,43 +125,96 @@ header nav{
     top: 8%;
     left: 8%;
 }
-h1{
+#main-container h1{
     color: #F8FAFC;
     text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
 }
-p{
+#main-container .description{
     color: #F8FAFC;
     font-family: kazimir;
-    width: 30%;
-    border: 1px solid white;
+    width: 40%;
     font-size: 1em;
     line-height: 1.3em;
     margin-top: 1.5em;
 }
-.select-container{
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -15%);
-    display: flex;
-   
-}
-select{
-    width: 15vw;
-    height: 5vh;
-    border: 1px solid white;
-    margin-right: 5px;
-    background: transparent;
-    padding: 10px;
-    outline: 1px solid white;
 
+.filter-container{
+    position: absolute;
+    top: 6%;
+    left: 25%;
+    width: 50vw;
+    padding: 1em;
+    display: flex;
 }
-option{
-    color: #F8FAFC;
+
+.eyes-products-container, .price-filter-container{
+    border: 1px solid rgba(248, 250, 252, 50%);
+    font-family: kazimir;
+    width: 16vw;
+    height: 5vh;
+    margin-right: 5px;
+    user-select: none;
+    font-size: 0.8em;
     text-transform: uppercase;
+    position: relative;
 }
+
+.select-container .default-option{
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    color: #F8FAFC;
+    
+}
+.select-container .default-option li{
+    padding: 0.5em 0.62em 0.6em 0.62em; 
+}
+
+.select-container .default-option .icon{
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    font-size: 1.4em;
+}
+
+.select-container  .select{
+    position: absolute;
+    top: 90%;
+    left: 0;
+    width: 100%;
+    background: #F8FAFC;  
+    color: #051326;
+    display: none;
+    
+}
+
+.select-container .select li{
+    cursor: pointer;
+    padding: 10px 0 10px 10px;
+    line-height: 2em;
+    
+}
+
+
+.select-container .select li:hover{
+    background: #c9dbf3;
+}
+
+.select-container.active .default-option{
+    background: #F8FAFC;
+    color: #051326;
+}
+
+.select-container.active .default-option li .icon{
+    transform: rotate(-180deg);
+}
+
+.select-container.active .select{
+    display: block;
+} 
+
+
 
 #all-product-container{
     width: 100%;
@@ -175,8 +223,9 @@ option{
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     position: absolute;
-    top: 13%;
+    top: 9%;
     left: 0%;
+    z-index: -4;
 }
 
 .products{
@@ -184,94 +233,77 @@ option{
 }
 
 .product1{
-    background: #192D46;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 }
 .product2{
-    background: green;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 }
 .product3{
-    background:orangered;
     grid-column: 3 / 4;
     grid-row: 1 / 2;
 }
 .product4{
-    background: black;
     grid-column: 4 / 5;
     grid-row: 1 / 2;
 }
 .product5{
-    background: #ffffff;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
 }
 .product6{
-    background: yellow;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 }
 .product7{
-    background: blueviolet;
     grid-column: 3 / 4;
     grid-row: 2 / 3;
 }
 .product8{
-    background: maroon;
     grid-column: 4 / 5;
     grid-row: 2 / 3;
 }
 .product9{
-    background: olive;
     grid-column: 1 / 2;
     grid-row: 3 / 4;
 }
 .product10{
-    background: red;
     grid-column: 2 / 3;
     grid-row: 3 / 4;
 }
 .product11{
-    background: blueviolet;
     grid-column: 3 / 4;
     grid-row: 3 / 4;
 }
 .product12{
-    background:orange;
     grid-column: 4 / 5;
     grid-row: 3 / 4;
 }
 .product13{
-    background: indianred;
     grid-column: 1 / 2;
     grid-row: 4 / 5;
 }
 .product14{
-    background:crimson;
     grid-column: 2 / 3;
     grid-row: 4 / 5;
 }
 .product15{
-    background: chartreuse;
     grid-column: 3 / 4;
     grid-row: 4 / 5;
 }
 .product16{
-    background: purple;
     grid-column: 4 / 5;
     grid-row: 4 / 5;
 }
 
 .product-swipe{
-    border: 1px solid white;
-    width: 17vw;
-    height: 5vh;
+    width: 25vw;
+    height: 7vh;
     display: flex;
     justify-content: space-between;
     position: absolute;
-    bottom: 4%;
+    bottom: 3%;
     left: 50%;
     transform: translate(-50%, -5%);
     padding: 0px 5px 0px 5px;
@@ -282,54 +314,33 @@ option{
     
 }
 .swipes{
-    width: 3vw;
+    width: 4vw;
     height: 100%;
-    border: 1px solid white;
     text-align: center;
     font-family: kazimir;
     font-size: 1em;
     color: #F8FAFC;
-    padding: 5px;
+    padding: 0.75em;
     cursor: pointer;
+    opacity: 0.5;
 
 }
 .swipes.current{
     background: #192D46;
+    opacity: 1;
 }
 
-.fal{
+.product-swipe .fa-long-arrow-left{
     color: #F8FAFC;
-    padding: 5px;
+    padding: 0.75em  0 0.75em 2em;
+    opacity: 0.5;
+    cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.product-swipe .fa-long-arrow-right{
+    color: #F8FAFC;
+    padding: 0.75em 2em 0.75em 0 ;
+    cursor: pointer;
+}
 
 #footer{
     width: 100vw;
@@ -418,4 +429,5 @@ option{
     color: #F8FAFC;
     margin-right: 1em;
     font-size: 1.2em;
+    cursor: pointer;
 }
