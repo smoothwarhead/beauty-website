@@ -291,22 +291,30 @@
             $(document).ready(function(){
 
                 $('.default-option').click(function(){
-
-                    $(this).parent().toggleClass('active');  
+                    $(this).parent().toggleClass('active');             
                 })
 
                 $('.select1 li').click(function(){
                     let currentText = $(this).text();
                     $('.opt1 p').text(currentText);
-                    $('.opt1').parent().removeClass('active');
+                    remover($('.opt1'));
                     
                 })
-                $('.select2 li').click(function(){
+ 
+               $('.select2 li').click(function(){
                     let currentText = $(this).text();
                     $('.opt2 p').text(currentText);
-                    $('.opt2').parent().removeClass('active');
-                    
+                    remover($('.opt2')); 
                 })
+
+
+
+               
+
+
+                function remover(el){
+                    el.parent().removeClass('active');
+                }
 
 
 
